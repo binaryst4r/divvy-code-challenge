@@ -6,7 +6,8 @@ import ArrowSvg from '../svg/arrows'
 
 function PullRequest({pr, filter, setFilter, theme}) {
   const labels = pr.labels.map(l => l.name)
-  // if there is a filter and its not included in the labels, return nothing
+
+  // if there is a label filter and its not included in the pr's labels, return nothing
   if (filter && !labels.includes(filter)) { return null }
   return (
     <PullRequestListItem>
@@ -22,6 +23,8 @@ function PullRequest({pr, filter, setFilter, theme}) {
       <PullRequestLabels>
         {pr.labels.map((label, i) => (
           <Label
+            role='label'
+            key={i}
             onClick={() => setFilter(label.name)}
             color={label.color}>
             {label.name}
