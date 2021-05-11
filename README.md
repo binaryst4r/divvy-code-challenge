@@ -7,4 +7,4 @@ To run the app:
 To run the test:
 ### `yarn test`
 
-Deployment is handled through GitHub/AWS Amplify.
+Deployment is handled through Master Branch -> AWS Amplify. 
