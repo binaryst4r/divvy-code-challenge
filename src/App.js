@@ -10,7 +10,7 @@ const defaultTheme = allThemes[0]
 function App() {
   const [pullRequests, setPullRequests] = useState([])
   const [filter, setFilter] = useState('')
-  const [loading, setLoading] = useState('')
+  const [loading, setLoading] = useState(true)
   const [theme, setTheme] = useState(defaultTheme)
 
   useEffect(() => {
