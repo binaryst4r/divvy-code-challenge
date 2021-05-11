@@ -46,3 +46,10 @@ test('renders a pull request list item correctly', () => {
   const prLabels = screen.getAllByRole('label')
   expect(prLabels).toHaveLength(2)
 });
+
+test('doesnt render a filtered pull request', () => {
+  const {container} = render(
+    <PullRequestListItem filter="foo" pr={prStub} theme={themes[0]} />
+  );
+  expect(container.firstChild).toBeNull()
+});
