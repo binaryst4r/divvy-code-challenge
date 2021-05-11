@@ -22,9 +22,10 @@ function PageHeader({setFilter, filter}) {
 const Header = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding: 40px 0;
+  padding: 20px 0;
+  height: 120px;
 `
 
 const PageTitle = styled.h2`

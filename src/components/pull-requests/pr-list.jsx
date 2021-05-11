@@ -2,11 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import PrListItem from './pr-list-item'
 
-function PrList({pullRequests, filter, setFilter}) {
+function PrList({pullRequests, filter, setFilter, theme}) {
   return (
     <List>
       {pullRequests.map((pr, i) => (
         <PrListItem
+          theme={theme}
           key={i}
           setFilter={setFilter}
           filter={filter}
